@@ -3,79 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Construction Excellence | Navy & Grey</title>
+    <title>Esqueda Framing & Construction</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        // Simple toggle script for your CS project
         tailwind.config = {
             darkMode: 'class',
         }
+
+        // Language Toggle Logic
+        function toggleLanguage() {
+            const elements = document.querySelectorAll('[data-en]');
+            const btn = document.getElementById('lang-btn');
+            const isSpanish = btn.innerText === 'ESP';
+            
+            elements.forEach(el => {
+                el.innerText = isSpanish ? el.getAttribute('data-es') : el.getAttribute('data-en');
+            });
+            
+            btn.innerText = isSpanish ? 'ENG' : 'ESP';
+        }
     </script>
 </head>
-<!--
-
-https://squidyblitz.github.io/stepdad-construction/
-
--->
 
 <body class="bg-gray-50 text-slate-900 font-sans transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
 
-    <nav class="p-5 bg-white dark:bg-slate-900 shadow-sm flex justify-between items-center border-b-4 border-slate-800 dark:border-slate-700">
-        <h1 class="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tighter">
-            <span class="text-slate-500">Navy</span>Blue
+    <nav class="p-5 bg-white dark:bg-slate-900 shadow-sm flex justify-between items-center border-b-4 border-blue-900 dark:border-blue-700 sticky top-0 z-50">
+        <h1 class="text-2xl font-black text-blue-900 dark:text-white uppercase tracking-tighter">
+            ESQUEDA <span class="text-slate-500 font-light">CONSTRUCTION</span>
         </h1>
-        <ul class="hidden md:flex gap-8 font-bold text-sm uppercase items-center">
-            <li><a href="#" class="hover:text-slate-500 transition dark:text-slate-300">Projects</a></li>
-            <li><a href="#" class="hover:text-slate-500 transition dark:text-slate-300">Services</a></li>
-            <li><a href="#" class="hover:text-slate-500 transition dark:text-slate-300">Contact</a></li>
-            <li>
-                <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full">
-                    🌙
-                </button>
-            </li>
-        </ul>
-    </nav>
-
-    <header class="relative py-24 px-10 text-center bg-slate-900 dark:bg-black text-white">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-                Building With <span class="text-slate-400">Integrity</span>
-            </h2>
-            <p class="text-xl text-slate-400 mb-10">
-                From foundation to finish, we handle every detail with professional craftsmanship. 
-            </p>
-            <button class="bg-white hover:bg-slate-200 text-slate-900 px-10 py-4 rounded-sm font-black uppercase tracking-widest transition-all transform hover:-translate-y-1 shadow-xl">
-                Get a Free Quote
+        <div class="flex gap-4 items-center">
+            <ul class="hidden md:flex gap-8 font-bold text-sm uppercase items-center mr-4">
+                <li><a href="#" data-en="Services" data-es="Servicios" class="hover:text-blue-600 transition dark:text-slate-300">Services</a></li>
+                <li><a href="tel:9562404388" class="hover:text-blue-600 transition dark:text-slate-300">956-240-4388</a></li>
+            </ul>
+            <button id="lang-btn" onclick="toggleLanguage()" class="px-3 py-1 border-2 border-blue-900 dark:border-white rounded font-bold text-xs transition-all hover:bg-blue-900 hover:text-white dark:hover:bg-white dark:hover:text-black">
+                ESP
+            </button>
+            <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full">
+                🌙
             </button>
         </div>
-    </header>
+    </nav>
 
-    <section class="py-16 bg-white dark:bg-slate-950">
-        <div class="max-w-6xl mx-auto px-10">
-            <h3 class="text-3xl font-bold text-center mb-12 uppercase tracking-widest text-slate-800 dark:text-slate-200">Our Services</h3>
-            <div class="grid md:grid-cols-3 gap-10">
-                
-                <div class="bg-slate-50 dark:bg-slate-900 p-8 rounded-lg shadow-sm hover:shadow-lg transition border-t-4 border-slate-800 dark:border-slate-500">
-                    <div class="text-4xl mb-4">🏠</div>
-                    <h4 class="text-xl font-bold mb-2 dark:text-white">Remodeling</h4>
-                    <p class="text-slate-600 dark:text-slate-400">Complete kitchen, bathroom, and home renovations tailored to your vision.</p>
-                </div>
-
-                <div class="bg-slate-50 dark:bg-slate-900 p-8 rounded-lg shadow-sm hover:shadow-lg transition border-t-4 border-slate-800 dark:border-slate-500">
-                    <div class="text-4xl mb-4">🔨</div>
-                    <h4 class="text-xl font-bold mb-2 dark:text-white">New Construction</h4>
-                    <p class="text-slate-600 dark:text-slate-400">Framing, additions, and structural work built to last for generations.</p>
-                </div>
-
-                <div class="bg-slate-50 dark:bg-slate-900 p-8 rounded-lg shadow-sm hover:shadow-lg transition border-t-4 border-slate-800 dark:border-slate-500">
-                    <div class="text-4xl mb-4">📏</div>
-                    <h4 class="text-xl font-bold mb-2 dark:text-white">Consultation</h4>
-                    <p class="text-slate-600 dark:text-slate-400">Professional estimates and project planning to get your job done right.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    
-</body>
-</html>
+    <header class="relative py-24 px-10 text-center bg-blue-900 dark:bg-slate-900 text-white border-b-8 border-slate-200 dark:border-slate-800">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-5xl md:text-7xl font-black mb-4 leading-tight uppercase tracking-tighter" data-en="Framing & Construction" data-es="Enmarcado y Construcción">
+                Framing & Construction
+            </h2>
+            <p class="text-xl text-blue-200 mb-10 font-medium" data-en="Quality
