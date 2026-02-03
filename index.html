@@ -3,63 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Construction Excellence | Quality Building</title>
+    <title>Construction Excellence | Navy & Grey</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head> 
+    <script>
+        // Simple toggle script for your CS project
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
 <!--
+
 https://squidyblitz.github.io/stepdad-construction/
+
 -->
 
-<body class="bg-gray-50 text-slate-900 font-sans">
+<body class="bg-gray-50 text-slate-900 font-sans transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
 
-    <nav class="p-5 bg-white shadow-sm flex justify-between items-center border-b-4 border-orange-500">
-        <h1 class="text-2xl font-black text-slate-800 uppercase tracking-tighter">
-        
-            </span> NavyBlue
+    <nav class="p-5 bg-white dark:bg-slate-900 shadow-sm flex justify-between items-center border-b-4 border-slate-800 dark:border-slate-700">
+        <h1 class="text-2xl font-black text-slate-800 dark:text-white uppercase tracking-tighter">
+            <span class="text-slate-500">Navy</span>Blue
         </h1>
-        <ul class="hidden md:flex gap-8 font-bold text-sm uppercase">
-            <li><a href="#" class="hover:text-orange-600 transition">Projects</a></li>
-            <li><a href="#" class="hover:text-orange-600 transition">Services</a></li>
-            <li><a href="#" class="hover:text-orange-600 transition">Contact</a></li>
+        <ul class="hidden md:flex gap-8 font-bold text-sm uppercase items-center">
+            <li><a href="#" class="hover:text-slate-500 transition dark:text-slate-300">Projects</a></li>
+            <li><a href="#" class="hover:text-slate-500 transition dark:text-slate-300">Services</a></li>
+            <li><a href="#" class="hover:text-slate-500 transition dark:text-slate-300">Contact</a></li>
+            <li>
+                <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 bg-slate-100 dark:bg-slate-800 rounded-full">
+                    🌙
+                </button>
+            </li>
         </ul>
     </nav>
 
-    <header class="relative py-24 px-10 text-center bg-slate-900 text-white">
+    <header class="relative py-24 px-10 text-center bg-slate-900 dark:bg-black text-white">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-                Building With <span class="text-grey-500">Integrity</span>
+                Building With <span class="text-slate-400">Integrity</span>
             </h2>
             <p class="text-xl text-slate-400 mb-10">
                 From foundation to finish, we handle every detail with professional craftsmanship. 
             </p>
-            <button class="bg-orange-600 hover:bg-orange-700 text-white px-10 py-4 rounded-sm font-black uppercase tracking-widest transition shadow-lg">
+            <button class="bg-white hover:bg-slate-200 text-slate-900 px-10 py-4 rounded-sm font-black uppercase tracking-widest transition-all transform hover:-translate-y-1 shadow-xl">
                 Get a Free Quote
             </button>
         </div>
     </header>
 
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-white dark:bg-slate-950">
         <div class="max-w-6xl mx-auto px-10">
-            <h3 class="text-3xl font-bold text-center mb-12 uppercase tracking-widest">Our Services</h3>
+            <h3 class="text-3xl font-bold text-center mb-12 uppercase tracking-widest text-slate-800 dark:text-slate-200">Our Services</h3>
             <div class="grid md:grid-cols-3 gap-10">
-                <div class="bg-slate-50 p-8 rounded-lg shadow-sm hover:shadow-md transition border-t-4 border-orange-500">
+                
+                <div class="bg-slate-50 dark:bg-slate-900 p-8 rounded-lg shadow-sm hover:shadow-lg transition border-t-4 border-slate-800 dark:border-slate-500">
                     <div class="text-4xl mb-4">🏠</div>
-                    <h4 class="text-xl font-bold mb-2">Remodeling</h4>
-                    <p class="text-slate-600">Complete kitchen, bathroom, and home renovations tailored to your vision.</p>
+                    <h4 class="text-xl font-bold mb-2 dark:text-white">Remodeling</h4>
+                    <p class="text-slate-600 dark:text-slate-400">Complete kitchen, bathroom, and home renovations tailored to your vision.</p>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-lg shadow-sm hover:shadow-md transition border-t-4 border-orange-500">
+
+                <div class="bg-slate-50 dark:bg-slate-900 p-8 rounded-lg shadow-sm hover:shadow-lg transition border-t-4 border-slate-800 dark:border-slate-500">
                     <div class="text-4xl mb-4">🔨</div>
-                    <h4 class="text-xl font-bold mb-2">New Construction</h4>
-                    <p class="text-slate-600">Framing, additions, and structural work built to last for generations.</p>
+                    <h4 class="text-xl font-bold mb-2 dark:text-white">New Construction</h4>
+                    <p class="text-slate-600 dark:text-slate-400">Framing, additions, and structural work built to last for generations.</p>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-lg shadow-sm hover:shadow-md transition border-t-4 border-orange-500">
+
+                <div class="bg-slate-50 dark:bg-slate-900 p-8 rounded-lg shadow-sm hover:shadow-lg transition border-t-4 border-slate-800 dark:border-slate-500">
                     <div class="text-4xl mb-4">📏</div>
-                    <h4 class="text-xl font-bold mb-2">Consultation</h4>
-                    <p class="text-slate-600">Professional estimates and project planning to get your job done right.</p>
+                    <h4 class="text-xl font-bold mb-2 dark:text-white">Consultation</h4>
+                    <p class="text-slate-600 dark:text-slate-400">Professional estimates and project planning to get your job done right.</p>
                 </div>
+
             </div>
         </div>
     </section>
-    <!------- https://squidyblitz.github.io/stepdad-construction/-->
+    
 </body>
 </html>
